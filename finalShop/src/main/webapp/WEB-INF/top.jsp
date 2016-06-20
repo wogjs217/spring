@@ -21,7 +21,7 @@
 		style=
 		"float: left;
 		font:30px Georgia Bold,sans-serif;
-		text-align: center;color: #fff;text-shadow: 0px 3px 8px #2a2a2a">자바나라 쇼핑몰</h1>
+		text-align: center;color: #fff;text-shadow: 0px 3px 8px #2a2a2a">자바나라 쇼핑몰1</h1>
 
 		<div>
 			<h5 style="float: right; margin-left: 10px">
