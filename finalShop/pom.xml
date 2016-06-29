@@ -15,6 +15,7 @@
 	</properties>
 	<dependencies>
 		<!-- Spring -->
+
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -145,6 +146,13 @@
 			<version>1.1.1</version>
 		</dependency>
 
+		<!-- 페이징처리 전자정보프레임워크 -->
+		<dependency>
+			<groupId>egovframework.rte</groupId>
+			<artifactId>egovframework.rte.ptl.mvc</artifactId>
+			<version>3.5.0</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -184,12 +192,23 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<repositories>
 		<repository>
 			<id>mesir-repo</id>
 			<url>https://code.lds.org/nexus/content/groups/main-repo</url>
 		</repository>
+
+		<repository>
+			<id>egovframe</id>
+			<url>http://www.egovframe.go.kr/maven/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
 	</repositories>
-	
+
 </project>

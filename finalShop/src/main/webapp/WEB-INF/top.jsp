@@ -21,13 +21,13 @@
 		style=
 		"float: left;
 		font:30px Georgia Bold,sans-serif;
-		text-align: center;color: #fff;text-shadow: 0px 3px 8px #2a2a2a">자바나라 쇼핑몰1</h1>
+		text-align: center;color: #fff;text-shadow: 0px 3px 8px #2a2a2a">자바나라 쇼핑몰</h1>
 
 		<div>
 			<h5 style="float: right; margin-left: 10px">
 			<a href="#">오늘의 날씨</a></h5>
 			<h5 style="float: right; margin-left: 10px">
-			<a href="/finalShop/board.do">게시판</a></h5>
+			<a href="/finalShop/board.do?currentPageNo=1">게시판</a></h5>
 			<h5 style="float: right; margin-left: 10px">e-book</h5>
 			
 					

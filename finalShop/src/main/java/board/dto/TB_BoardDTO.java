@@ -13,6 +13,16 @@ public class TB_BoardDTO {
 	
 	public TB_BoardDTO() {
 	}
+	
+
+
+/*	public TB_BoardDTO(String mem_Id, String title, String text) {
+		super();
+		this.mem_Id = mem_Id;
+		this.title = title;
+		this.text = text;
+	}
+*/
 
 
 	public TB_BoardDTO(String board_No, String mem_Id, String title, String text, int count, String del_Flg,

@@ -4,7 +4,36 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="kitri.board">
 
-	<select id="list" resultType="board.dto.TB_BoardDTO">
-		select * from tb_board 
+	<insert id="insert" parameterType="HashMap">
+		INSERT INTO TB_BOARD
+		(BOARD_NO,MEM_ID,TITLE,TEXT,COUNT,DEL_FLG,REG_DTM,mod_DTM)
+		values
+		(SEQ_TB_BOARD_IDX.NEXTVAL,#{mem_Id},#{title},#{text},0,'N',SYSDATE,SYSDATE)
+	</insert>
+
+	<select id="selectlist" parameterType="HashMap" resultType="HashMap">
+		select * from
+	(select AA.*,rownum rnum from
+		(select * from TB_BOARD order by board_no desc)aa
+	)
+	<![CDATA[where rnum>=#{start} and rnum<=#{end}]]>
 	</select>
+
+
+	<select id="detail" parameterType="hashmap" resultType="hashmap">
+		SELECT
+		mem_Id,title,text
+		FROM
+		TB_BOARD
+		WHERE
+		board_No = #{BOARD_NO}
+	</select>
+
+	<select id="listSize" resultType="int">
+		select COUNT(*) from
+		tb_board WHERE
+		DEL_FLG = 'N' ORDER BY board_no desc
+	</select>
+
+	<!-- <update id="updatecount" parameterType="hashmap"></update> -->
 </mapper>
