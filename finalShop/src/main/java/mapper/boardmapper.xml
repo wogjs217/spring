@@ -13,10 +13,11 @@
 
 	<select id="selectlist" parameterType="HashMap" resultType="HashMap">
 		select * from
-	(select AA.*,rownum rnum from
-		(select * from TB_BOARD order by board_no desc)aa
-	)
-	<![CDATA[where rnum>=#{start} and rnum<=#{end}]]>
+		(select AA.*,rownum rnum from
+		(select * from TB_BOARD
+		WHERE DEL_FLG = 'N' order by board_no desc)aa
+		)
+		<![CDATA[where rnum>=#{start} and rnum<=#{end}]]>
 	</select>
 
 
@@ -31,9 +32,19 @@
 
 	<select id="listSize" resultType="int">
 		select COUNT(*) from
-		tb_board WHERE
+		tb_board
+		WHERE
 		DEL_FLG = 'N' ORDER BY board_no desc
 	</select>
+	
+	<update id="delete" parameterType="String">
+		update TB_BOARD SET del_flg = 'Y' where board_no =#{board_no}
+	</update>
+	
+	<update id="update" parameterType="hashmap">
+		update TB_BOARD SET TITLE=#{title}, TEXT=#{text} where board_no =#{board_no}
+	</update>
+	
 
-	<!-- <update id="updatecount" parameterType="hashmap"></update> -->
+<!-- <update id="updatecount" parameterType="hashmap"></update> -->
 </mapper>

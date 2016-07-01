@@ -49,4 +49,15 @@ public class TB_BoardDaoImpl implements TB_BoardDAO {
 		return sqlSession.selectOne("kitri.board.listSize");
 	}
 
+	@Override
+	public void boardDelete(String board_no) {
+		// TODO Auto-generated method stub
+		sqlSession.update("kitri.board.delete",board_no);
+	}
+
+	@Override
+	public void boardUpdate(Map<String, Object> map) {
+		sqlSession.update("kitri.board.update",map);
+	}
+
 }

@@ -15,6 +15,8 @@ public interface TB_BoardDAO {
 	Map<String, Object> boardDetail(Map<String, Object> map);
 	void updatecount(Map<String, Object> map);
 	int getboardListSize();
+	void boardDelete(String board_no);
+	void boardUpdate(Map<String, Object> map);
 }
 
 

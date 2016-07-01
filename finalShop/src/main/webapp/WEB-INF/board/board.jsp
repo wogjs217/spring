@@ -54,6 +54,7 @@
 									<td>${row.COUNT }</td>
 									<td>${row.REG_DTM }</td>
 									<td>${row.MOD_DTM }</td>
+									<td><a href="/finalShop/boarddelete.do?BOARD_NO=${row.BOARD_NO}">삭제</a></td>
 								</tr>
 							</c:forEach>
 						</c:when>
@@ -80,6 +81,8 @@
 	}	
 	</script>
 	<div class="container">
+	<button type="button" class="btn btn-info"
+			onclick="location.href='/finalShop/prdlist.do'">홈으로</button>
 		<button type="button" class="btn btn-info"
 			onclick="location.href='/finalShop/boardwrite.do'">글쓰기</button>
 	</div>

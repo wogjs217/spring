@@ -52,4 +52,17 @@ public class TB_BoardDTOServiceImpl implements TB_BoardDTOService {
 	}
 
 
+	@Override
+	public void boardDelete(String board_no) {
+		dao.boardDelete(board_no);
+	}
+
+
+	@Override
+	public void boardUpdate(Map<String, Object> map) {
+		dao.boardUpdate(map);
+		
+	}
+
+
 }

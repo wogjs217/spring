@@ -13,6 +13,8 @@ public interface TB_BoardDTOService {
 	List<Map<String, Object>> selectBoardlist(HashMap<String , Object> map);
 	Map<String, Object> boardDetail(Map<String, Object> map);
 	int getboardListSize();
+	void boardDelete(String board_no);
+	void boardUpdate(Map<String, Object> map);
 }
 
 
